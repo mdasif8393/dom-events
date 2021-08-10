@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Dom</title>
+    <style>
+        article{
+            border: 2px solid skyblue;
+            margin: 3px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>Exploring DOM</h3> 
+            <article>
+                <h3>article-1</h3>
+                <p title="I am the most important author"id="bestSeller" class="author" >author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur provident, amet assumenda, dicta, ducimus ut consequuntur ullam iste aliquid laudantium deleniti officia saepe omnis incidunt voluptas error! Quis, alias nesciunt?</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Illo illum earum quo esse accusamus provident vitae tempore est. Laborum unde aliquam illum, ipsam optio fugit consequatur, commodi qui ex ullam iure facilis dolorum quia rem ea eligendi cumque.</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Doloribus maiores perspiciatis necessitatibus autem optio, veritatis iusto exercitationem recusandae eligendi consequatur. Veritatis cum nostrum, accusantium excepturi optio commodi consectetur laboriosam aut illum, exercitationem quod eligendi aspernatur recusandae ipsa. Qui.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        document.body.style.backgroundColor="tomato";
+     var authors = document.querySelectorAll('.special h3');
+     for(var i=0; i<authors.length; i++){
+        var element = authors[i];
+        //console.log(element.innerHTML);
+        element.innerHTML= 'Lekhok-' +(i+1);
+        element.setAttribute('title','All Author is same');
+        element.style.backgroundColor = 'lightblue';
+        element.style.margin='5px';
+     }
+    </script>
+</body>
+</html>
